@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>roundhouse</groupId>
-    <artifactId>roundhouse</artifactId>
+    <groupId>org.emi</groupId>
+    <artifactId>roundhouses</artifactId>
     <version>1.0.0</version>
 
     <profiles>
@@ -99,10 +99,10 @@
 
         <!-- These settings will go into the mods _Info.txt file -->
         <mod.version>${project.version}</mod.version>
-        <mod.name>Roundhouses</mod.name>
-        <mod.description>Roundhouses</mod.description>
+        <mod.name>roundhouses</mod.name>
+        <mod.description>roundhouses</mod.description>
         <mod.author>EmiTheWitch and Mialbowy</mod.author>
-        <mod.info>Roundhouses</mod.info>
+        <mod.info>roundhouses</mod.info>
         <game.version.major>67</game.version.major>
         <game.version.minor>41</game.version.minor>
 

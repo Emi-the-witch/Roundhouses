@@ -497,7 +497,7 @@ class Sprites {
 
 	final class SpriteConfigs {
 
-		final SpriteConfig[][] sprites = new SpriteConfig[4][];
+		final SpriteConfig[][] sprites = new SpriteConfig[5][];
 
 		public SpriteConfigs() {
 			sprites[0] = mirror(new SpriteConfig[] {
@@ -761,32 +761,29 @@ class Sprites {
 			// LONGHOUSE_MOD Added new furniture layout (only one!, I'm lazy!)
 			sprites[3] = mirror(new SpriteConfig[] {
 				new SpriteConfig(new Sprite[][] {
-				//		{null,null,null,bedS,null,null,null},
-				//		{null,null,bedS,nic1,bedN,null,null},
-				//		{null,bedS,tabl,null,stor,bedN,null},
-				//		{bedN,nic2,null,tabl,null,bedS,bedN},
-				//		{null,bedS,null,null,null,bedS,null},
-				//		{null,null,staU,null,staD,null,null},
-				//		{null,null,null,_mat,null,null,null},
-
-						{null,null,null,null,null,null,null,null,null},
-						{null,null,null,bedS,nic1,bedN,null,null,null},
-						{null,null,bedS,null,null,null,bedN,null,null},
-						{null,bedN,null,null,tabl,null,null,bedS,null},
-						{null,bedS,null,nic2,nic1,stor,null,bedN,null},
-						{null,bedN,null,null,tabl,null,null,bedN,null},
-						{null,null,bedS,null,null,null,nic2,null,null},
-						{null,null,null,staU,_mat,staD,null,null,null},
-
-
-				//		{null,null,bedS,nic1,bedN,null,null},
-				//		{null,bedS,null,null,null,bedN,null},
-				//		{bedN,null,null,tabl,null,null,bedS},
-				//		{bedS,null,nic2,nic1,stor,null,bedN},
-				//		{bedN,null,null,tabl,null,null,bedN},
-				//		{null,bedS,null,null,null,nic2,null},
-				//		{null,null,staU,_mat,staD,null,null},
-
+					{null,null,null,null,null,null,null,null,null},
+					{null,null,null,bedS,nic1,bedN,null,null,null},
+					{null,null,bedS,null,null,null,bedN,null,null},
+					{null,bedN,null,null,tabl,null,null,bedS,null},
+					{null,bedS,null,nic2,nic1,stor,null,bedN,null},
+					{null,bedN,null,null,tabl,null,null,bedN,null},
+					{null,null,bedS,null,null,null,nic2,null,null},
+					{null,null,null,staU,_mat,staD,null,null,null},
+				}),
+			});
+			sprites[4] = mirror(new SpriteConfig[] {
+				new SpriteConfig(new Sprite[][] {
+					{ bedN, nSta, bedN },
+					{ bedS, null, bedS },
+					{ chai, null, nic1 },
+					{ tabl, null, nic2 },
+					{ bedS, null, bedS },
+					{ stor, null, bedS },
+					{ bedN, null, bedS },
+					{ bedS, null, nSta },
+					{ chai, null, bedN },
+					{ bedS, null, nic2 },
+					{ staU, _mat, staD },
 				}),
 			});
 

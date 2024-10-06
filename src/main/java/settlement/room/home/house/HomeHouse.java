@@ -37,8 +37,8 @@ public final class HomeHouse extends RoomWrap implements HOME{
     private final LivingDataD lit = 		new LivingDataD(this, 1, 0b0000_0000_0000_0000_0000_0000_0000_0001);
     private final LivingDataD upgrade = 	new LivingDataD(this, 1, 0b0000_0000_0000_0000_0000_0000_0000_1110);
     private final LivingDataD isolation = 	new LivingDataD(this, 1, 0b0000_0000_0000_0000_0000_1111_1111_0000);
-    private final LivingDataD renderTimer = new LivingDataD(this, 1, 0b0000_0000_0000_1111_1111_0000_0000_0000);
-    private final LivingDataD am = 			new LivingDataD(this, 1, 0b0000_0011_1111_0000_0000_0000_0000_0000);
+    private final LivingDataD renderTimer =     new LivingDataD(this, 1, 0b0000_0000_0000_1111_1111_0000_0000_0000);
+    private final LivingDataD am = 		new LivingDataD(this, 1, 0b0000_0011_1111_0000_0000_0000_0000_0000);
     private final LivingDataD amOdd = 		new LivingDataD(this, 1, 0b1111_1100_0000_0000_0000_0000_0000_0000);
     private final LivingDataD setting = 	new LivingDataD(this, 2, 0x0000FFFF);
     private final LivingDataD litTimer = 	new LivingDataD(this, 2, 0xFF000000);

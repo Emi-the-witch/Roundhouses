@@ -19,6 +19,10 @@ ITEMS: [
 	},
     {
         COSTS: [],
+        STATS: [13,],
+    },
+    {
+        COSTS: [],
         STATS: [10,],
     },
 ],

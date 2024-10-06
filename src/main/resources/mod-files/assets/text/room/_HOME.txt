@@ -28,5 +28,9 @@ ITEMS: [
         NAME: "Roundhouse",
         DESC: "A huge residence for those who hate squares.",
     },
+    {
+        NAME: "True Longhouse",
+        DESC: "A longhouse for those who know what long means.",
+    },
 
 ],

@@ -23,11 +23,14 @@ final class ContructorHome extends Furnisher {
 	private final ROOM_HOME blue;
 	
 	final FurnisherStat occupants = new FurnisherStat.FurnisherStatI(this, 1);
-	
+
+	// Add another line for every room and their upgrade value 0 match it with init.room._Home.txt
+	// rule of thumb:  +40%/+80% rounded
 	public final int[][] maxOccupants = new int[][] {
 			{3,4,5},
 			{5,7,9},
 			{10,14,18},
+			{13,18,23},
 			{10,14,18},
 	};
 	
@@ -38,7 +41,7 @@ final class ContructorHome extends Furnisher {
 	public final Floor flooring;
 	protected ContructorHome(RoomInitData init, ROOM_HOME blue)
 			throws IOException {
-		super(init, 4, 1);
+		super(init, 5, 1);
 		
 		flooring = floors.get(0);
 		sp = new Sprites(init.data());
@@ -78,33 +81,29 @@ final class ContructorHome extends Furnisher {
 			 {xx,__,__,__,xx},
 			 {xx,xx,ee,xx,xx},
 		}, 5);
-		// LONGHOUSE_MOD added new shape!
+		// Add roundhouse
 		create(new FurnisherItemTile[][] {
-		//		{ss,ss,ss,xx,ss,ss,ss},
-		//		{ss,ss,xx,__,xx,ss,ss},
-		//		{ss,xx,__,__,__,xx,ss},
-		//		{xx,__,__,__,__,__,xx},
-		//		{ss,xx,__,__,__,xx,ss},
-		//		{ss,ss,xx,__,xx,ss,ss},
-		//		{ss,ss,xx,ee,xx,ss,ss},
-
-
-		//		{ss,ss,xx,ee,xx,ss,ss},
-		//		{ss,xx,__,__,__,xx,ss},
-		//		{xx,__,__,__,__,__,xx},
-		//		{xx,__,__,__,__,__,xx},
-		//		{ss,xx,__,__,__,xx,ss},
-		//		{ss,ss,xx,ee,xx,ss,ss},
-
-				{ss,ss,ss,ss,xx,ss,ss,ss,ss},
-				{ss,ss,ss,xx,__,xx,ss,ss,ss},
-				{ss,ss,xx,__,__,__,xx,ss,ss},
-				{ss,xx,__,__,__,__,__,xx,ss},
-				{xx,__,__,__,__,__,__,__,xx},
-				{ss,xx,__,__,__,__,__,xx,ss},
-				{ss,ss,xx,__,__,__,xx,ss,ss},
-				{ss,ss,ss,xx,ee,xx,ss,ss,ss},
-
+			{ss,ss,ss,ss,xx,ss,ss,ss,ss},
+			{ss,ss,ss,xx,__,xx,ss,ss,ss},
+			{ss,ss,xx,__,__,__,xx,ss,ss},
+			{ss,xx,__,__,__,__,__,xx,ss},
+			{xx,__,__,__,__,__,__,__,xx},
+			{ss,xx,__,__,__,__,__,xx,ss},
+			{ss,ss,xx,__,__,__,xx,ss,ss},
+			{ss,ss,ss,xx,ee,xx,ss,ss,ss},
+		}, 5);
+		// Add true longhouse
+		create(new FurnisherItemTile[][]{
+			{xx, xx, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, __, xx},
+			{xx, ee, xx},
 		}, 5);
 		
 	}

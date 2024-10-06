@@ -23,10 +23,10 @@ Additional houses can be added by:
 		
 	Code files: 
 		Adding to settlement.room.house.home.ConstructorHome.java
-			Population, upgraded population, 2nd upgrade population for the room. Upgrade is 40% and 2nd Upgrade is 80% originally, rounded.
+			1) Population, upgraded population, 2nd upgrade population for the room. Upgrade is 40% and 2nd Upgrade is 80% originally, rounded.
 					{13,18,23},
 				
-			Create new furnishing placements (xx = not accessible entry, ee = entry, __ = room, ss = null (for non square shapes))
+			2) Create new furnishing placements (xx = not accessible entry, ee = entry, __ = room, ss = null (for non square shapes))
 			am value (5) is how many times it can be in a row. [Limited by settlement.room.main.furnisher.Furnisher.java's "allItems" array length, so big rooms and high am cause issues.]
 		
 				create(new FurnisherItemTile[][] {
@@ -40,12 +40,12 @@ Additional houses can be added by:
 					{ss,ss,ss,xx,ee,xx,ss,ss,ss},
 				}, 5);
 		
-			Modify the data value to be equal to the number of house designs 		
+			3) Modify the data value to be equal to the number of house designs 		
 				super(init, 5, 1);
 			
 		Adding to settlement.room.house.home.Carpet.java
 
-			Add a layout for the carpet that matches the usable tiles, generally0x10 is ignored, 0x00 is carpet. IDK what this really changes visually though. 
+			1) Add a layout for the carpet that matches the usable tiles, generally0x10 is ignored, 0x00 is carpet. IDK what this really changes visually though. 
 			
 				data[3] = make(
 					new int[][] {
@@ -60,18 +60,18 @@ Additional houses can be added by:
 					}
 				);
 			
-			Modify the data value to be equal to the number of house designs in the first number (second number is rotations, don't change)
+			2) Modify the data value to be equal to the number of house designs in the first number (second number is rotations, don't change)
 				private final int[][][][] data = new int[5][4][][];
 			
 		
 		Adding to settlement.room.house.home.Sprites.java
-			Add furniture displays, you can have multiple inside of the sprites[n] but only one is used here:
-			null = no furniture, 
-			nic1, nic2 = nicknacks, 
-			bedS, bedN = beds, 
-			tabl = table, 
-			staU, staD, ...I don't know.
-			
+			1) Add furniture displays, you can have multiple inside of the sprites[n] but only one is used here:
+				null = no furniture, 
+				nic1, nic2 = nicknacks, 
+				bedS, bedN = beds, 
+				tabl = table, 
+				staU, staD, ...I don't know.
+				
 				sprites[3] = mirror(new SpriteConfig[] {
 					new SpriteConfig(new Sprite[][] {
 						{null,null,null,null,null,null,null,null,null},
@@ -85,12 +85,12 @@ Additional houses can be added by:
 					}),
 				});
 		
-			Modify the data value to be equal to the number of house designs:
+			2) Modify the data value to be equal to the number of house designs:
 					final SpriteConfig[][] sprites = new SpriteConfig[5][];
 		
 		Adding to settlement.room.house.home.HomeHouse.java
-			If you need more than 100 usable tiles per room, update this variable:
-				    public final int[] valid = new int[100];
+			1) If you need more than 50 usable tiles per room, update this variable:
+				    public final int[] valid = new int[50];
 				
 		
 		settlement.room.house.home.LivingDataD.java

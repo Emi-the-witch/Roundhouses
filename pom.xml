@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>songs-of-syx-mod-example</artifactId>
+    <groupId>roundhouse</groupId>
+    <artifactId>roundhouse</artifactId>
     <version>1.0.0</version>
 
     <profiles>
@@ -13,7 +13,7 @@
             <id>windows</id>
             <properties>
                 <game.mod.directory>${user.home}/AppData/Roaming/songsofsyx/mods</game.mod.directory>
-                <game.install.directory>C:/Program Files (x86)/Steam/steamapps/common/Songs of Syx</game.install.directory>
+                <game.install.directory>C:/Emi/Games/steamapps/common/Songs of Syx</game.install.directory>
                 <game.mod.uploader.directory>${user.home}/AppData/Roaming/songsofsyx/mods-uploader</game.mod.uploader.directory>
             </properties>
             <activation>
@@ -26,7 +26,7 @@
             <id>linux</id>
             <properties>
                 <game.mod.directory>${user.home}/.local/share/songsofsyx/mods</game.mod.directory>
-                <game.install.directory>${user.home}/.steam/steam/steamapps/common/Songs of Syx</game.install.directory>
+                <game.install.directory>C:/Emi/Games/steamapps/common/Songs of Syx</game.install.directory>
                 <game.mod.uploader.directory>${user.home}/.local/share/songsofsyx/mods-uploader</game.mod.uploader.directory>
             </properties>
             <activation>
@@ -99,20 +99,12 @@
 
         <!-- These settings will go into the mods _Info.txt file -->
         <mod.version>${project.version}</mod.version>
-        <mod.name>Example Mod</mod.name>
-        <mod.description>This is an example mod made by Jake the game developer.</mod.description>
-        <mod.author>Jake</mod.author>
-        <mod.info>Example</mod.info>
-        <!--
-            This is the game version you are currently using. When the game updates:
-            * Download the new game version if you don't have it
-            * Check the version of the game by launching it
-            * Change the version here
-            * Run a "mvn validate" to install the new version in the local maven repository
-            * Maven is then able to find and resolve the new Songs of Syx code
-         -->
+        <mod.name>Roundhouses</mod.name>
+        <mod.description>Roundhouses</mod.description>
+        <mod.author>EmiTheWitch and Mialbowy</mod.author>
+        <mod.info>Roundhouses</mod.info>
         <game.version.major>67</game.version.major>
-        <game.version.minor>27</game.version.minor>
+        <game.version.minor>41</game.version.minor>
 
         <!-- Build settings -->
         <game.version.directory>V${game.version.major}</game.version.directory>

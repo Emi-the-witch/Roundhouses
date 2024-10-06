@@ -32,5 +32,9 @@ ITEMS: [
         NAME: "True Longhouse",
         DESC: "A longhouse for those who know what long means.",
     },
+    {
+        NAME: "Octagons",
+        DESC: "A house for those that just want to stop.",
+    },
 
 ],

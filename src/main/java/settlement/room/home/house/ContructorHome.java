@@ -32,6 +32,7 @@ final class ContructorHome extends Furnisher {
 			{10,14,18},
 			{13,18,23},
 			{10,14,18},
+			{12,17,22},
 	};
 	
 	static final int entrance = 2;
@@ -41,7 +42,7 @@ final class ContructorHome extends Furnisher {
 	public final Floor flooring;
 	protected ContructorHome(RoomInitData init, ROOM_HOME blue)
 			throws IOException {
-		super(init, 5, 1);
+		super(init, 6, 1);
 		
 		flooring = floors.get(0);
 		sp = new Sprites(init.data());
@@ -104,6 +105,16 @@ final class ContructorHome extends Furnisher {
 			{xx, __, xx},
 			{xx, __, xx},
 			{xx, ee, xx},
+		}, 5);
+		// Add Hexagons
+		create(new FurnisherItemTile[][]{
+			{ss,ss,xx,xx,xx,ss,ss},
+			{ss,xx,__,__,__,xx,ss},
+			{xx,__,__,__,__,__,xx},
+			{xx,__,__,__,__,__,xx},
+			{xx,__,__,__,__,__,xx},
+			{ss,xx,__,__,__,xx,ss},
+			{ss,ss,xx,ee,xx,ss,ss},
 		}, 5);
 		
 	}

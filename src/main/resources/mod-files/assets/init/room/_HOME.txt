@@ -25,6 +25,10 @@ ITEMS: [
         COSTS: [],
         STATS: [10,],
     },
+    {
+        COSTS: [],
+        STATS: [12,],
+    },
 ],
 UPGRADES: [
 	{

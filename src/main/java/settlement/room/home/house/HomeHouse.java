@@ -32,7 +32,7 @@ public final class HomeHouse extends RoomWrap implements HOME{
 
     // valid tiles for Roundhouse
     //private final int[] v = {3,5,11,12,13,14,15,19,20,21,22,23,24,25,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53};
-    public final int[] valid = new int[100];
+    public final int[] valid = new int[50];
 
     private final LivingDataD lit = 		new LivingDataD(this, 1, 0b0000_0000_0000_0000_0000_0000_0000_0001);
     private final LivingDataD upgrade = 	new LivingDataD(this, 1, 0b0000_0000_0000_0000_0000_0000_0000_1110);

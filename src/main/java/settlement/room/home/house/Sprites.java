@@ -497,7 +497,7 @@ class Sprites {
 
 	final class SpriteConfigs {
 
-		final SpriteConfig[][] sprites = new SpriteConfig[5][];
+		final SpriteConfig[][] sprites = new SpriteConfig[6][];
 
 		public SpriteConfigs() {
 			sprites[0] = mirror(new SpriteConfig[] {
@@ -758,19 +758,20 @@ class Sprites {
 				
 			
 			});
-			// LONGHOUSE_MOD Added new furniture layout (only one!, I'm lazy!)
+			// Round house, only 1 furniture style
 			sprites[3] = mirror(new SpriteConfig[] {
 				new SpriteConfig(new Sprite[][] {
-					{null,null,null,null,null,null,null,null,null},
+					{null,null,null,null,tabl,null,null,null,null},
 					{null,null,null,bedS,nic1,bedN,null,null,null},
 					{null,null,bedS,null,null,null,bedN,null,null},
 					{null,bedN,null,null,tabl,null,null,bedS,null},
-					{null,bedS,null,nic2,nic1,stor,null,bedN,null},
+					{nic2,bedS,null,nic2,nic1,stor,null,bedN,nic1},
 					{null,bedN,null,null,tabl,null,null,bedN,null},
 					{null,null,bedS,null,null,null,nic2,null,null},
 					{null,null,null,staU,_mat,staD,null,null,null},
 				}),
 			});
+			// True longhouse, only 1 furniture style
 			sprites[4] = mirror(new SpriteConfig[] {
 				new SpriteConfig(new Sprite[][] {
 					{ bedN, nSta, bedN },
@@ -786,7 +787,18 @@ class Sprites {
 					{ staU, _mat, staD },
 				}),
 			});
-
+			// octagon, only one furniture style
+			sprites[5] = mirror(new SpriteConfig[] {
+				new SpriteConfig(new Sprite[][] {
+					{null,null,bedS,nic1,bedN,null,null},
+					{null,bedS,null,null,null,bedN,null},
+					{bedN,null,null,tabl,null,null,bedS},
+					{bedS,null,nic2,nic1,stor,null,bedN},
+					{bedN,null,null,tabl,null,null,bedN},
+					{null,bedS,null,null,null,nic2,null},
+					{null,null,staU,_mat,staD,null,null},
+				}),
+			});
 
 
 		}

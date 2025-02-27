@@ -40,5 +40,9 @@ ITEMS: [
         NAME: "Triangle",
         DESC: "A house in the shape of a triangle for eccentrics.",
     },
+    {
+        NAME: "Triangle 2",
+        DESC: "A house in the shape of a triangle for eccentrics.",
+    },
 
 ],

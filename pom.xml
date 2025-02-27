@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.emi</groupId>
-    <artifactId>roundhouses</artifactId>
-    <version>1.0.1</version>
+    <artifactId>more.houses</artifactId>
+    <version>1.0.2</version>
 
     <profiles>
         <profile>
@@ -99,10 +99,10 @@
 
         <!-- These settings will go into the mods _Info.txt file -->
         <mod.version>${project.version}</mod.version>
-        <mod.name>roundhouses</mod.name>
-        <mod.description>roundhouses</mod.description>
+        <mod.name>More Houses</mod.name>
+        <mod.description>More Houses</mod.description>
         <mod.author>EmiTheWitch and Mialbowy</mod.author>
-        <mod.info>roundhouses</mod.info>
+        <mod.info>More Houses</mod.info>
         <game.version.major>68</game.version.major>
         <game.version.minor>0</game.version.minor>
 

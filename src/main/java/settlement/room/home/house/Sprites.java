@@ -493,8 +493,8 @@ class Sprites {
 
 
     final class SpriteConfigs {
-
-        final SpriteConfig[][] sprites = new SpriteConfig[7][];
+                                        //#!# Update this with each
+        final SpriteConfig[][] sprites = new SpriteConfig[8][];
 
         public SpriteConfigs() {
             sprites[0] = mirror(new SpriteConfig[] {
@@ -804,6 +804,17 @@ class Sprites {
                             {nSta,nic2,stor,null,null},
                             {bedS,null,null,tabl,null},
                             {bedN,staU,_mat,staD,nic1},
+                    }),
+            });
+
+            // Triangle Mirrored
+            sprites[7] = mirror(new SpriteConfig[] {
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,bedN},
+                            {null,null,null,nSta,bedS},
+                            {null,null,stor,nic2,nSta},
+                            {null,tabl,null,null,bedS},
+                            {nic1,staD,_mat,staU,bedN},
                     }),
             });
 

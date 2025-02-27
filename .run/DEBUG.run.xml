@@ -6,8 +6,8 @@
       <entry path="C:\Emi\Games\steamapps\common\Songs of Syx\base\script\Examples.jar" />
       <entry path="C:\Emi\Games\steamapps\common\Songs of Syx\base\script\Tutorial.jar" />
       <entry path="C:\Emi\Games\steamapps\common\Songs of Syx\base\script" />
-      <entry path="C:\Users\Emi\IdeaProjects\Roundhouses - V68\target\out\Roundhouses - V68\V68\script" />
-      <entry path="C:\Users\Emi\IdeaProjects\Roundhouses - V68\target\out\Roundhouses - V68\V68\script\Roundhouses.jar" />
+      <entry path="C:\Users\Emi\IdeaProjects\Roundhouses - V68\target\out\More Houses\V68\script" />
+      <entry path="C:\Users\Emi\IdeaProjects\Roundhouses - V68\target\out\More Houses\V68\script\More Houses.jar" />
     </classpathModifications>
     <option name="MAIN_CLASS_NAME" value="init.MainProcess" />
     <module name="Roundhouses" />

@@ -32,6 +32,7 @@ final class HomeContructor extends Furnisher{
             {10,14,18}, // True long house
             {12,17,22}, // octagon
             {5,7,9},    //Triangle
+            {5,7,9},    //Triangle mirrored
     };
 
     static final int entrance = 2;
@@ -41,7 +42,7 @@ final class HomeContructor extends Furnisher{
     public final Floor flooring;
     protected HomeContructor(RoomInitData init, ROOM_HOME blue)
             throws IOException {
-        super(init, 7   , 1);
+        super(init, 8  , 1);
 
         flooring = floors.get(0);
         sp = new Sprites(init.data());
@@ -119,6 +120,14 @@ final class HomeContructor extends Furnisher{
                 {xx,xx,ss,ss,ss},
                 {xx,__,xx,ss,ss},
                 {xx,__,__,xx,ss},
+                {xx,xx,ee,xx,xx},
+        }, 1);
+        // Add Triangles Mirrored
+        create(new FurnisherItemTile[][]{
+                {ss,ss,ss,ss,xx},
+                {ss,ss,ss,xx,xx},
+                {ss,ss,xx,__,xx},
+                {ss,xx,__,__,xx},
                 {xx,xx,ee,xx,xx},
         }, 1);
     }

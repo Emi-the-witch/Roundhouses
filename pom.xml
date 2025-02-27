@@ -6,14 +6,14 @@
 
     <groupId>org.emi</groupId>
     <artifactId>roundhouses</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <profiles>
         <profile>
             <id>windows</id>
             <properties>
                 <game.mod.directory>${user.home}/AppData/Roaming/songsofsyx/mods</game.mod.directory>
-                <game.install.directory>C:/Emi/Games/steamapps/common/Songs of Syx</game.install.directory>
+                <game.install.directory>C:/Emi/Project Fun/Songs of Syx/V68</game.install.directory>
                 <game.mod.uploader.directory>${user.home}/AppData/Roaming/songsofsyx/mods-uploader</game.mod.uploader.directory>
             </properties>
             <activation>
@@ -26,7 +26,7 @@
             <id>linux</id>
             <properties>
                 <game.mod.directory>${user.home}/.local/share/songsofsyx/mods</game.mod.directory>
-                <game.install.directory>C:/Emi/Games/steamapps/common/Songs of Syx</game.install.directory>
+                <game.install.directory>C:/Emi/Project Fun/Songs of Syx/V68</game.install.directory>
                 <game.mod.uploader.directory>${user.home}/.local/share/songsofsyx/mods-uploader</game.mod.uploader.directory>
             </properties>
             <activation>
@@ -103,8 +103,8 @@
         <mod.description>roundhouses</mod.description>
         <mod.author>EmiTheWitch and Mialbowy</mod.author>
         <mod.info>roundhouses</mod.info>
-        <game.version.major>67</game.version.major>
-        <game.version.minor>41</game.version.minor>
+        <game.version.major>68</game.version.major>
+        <game.version.minor>0</game.version.minor>
 
         <!-- Build settings -->
         <game.version.directory>V${game.version.major}</game.version.directory>

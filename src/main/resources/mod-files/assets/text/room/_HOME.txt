@@ -1,7 +1,7 @@
 INFO: {
 	NAME: "House",
 	NAMES: "Houses",
-	DESC: "Essential service where your subjects sleep and spend much of their time. Comes in different sizes and can be upgraded to accomodate more inhabitants. Subjects can upgrade their homes with resources, if you allow them.",
+	DESC: "Essential service where your subjects sleep and spend much of their time. Comes in different sizes and can be upgraded to accommodate more inhabitants. Subjects can upgrade their homes with resources, if you allow them.",
 },
 
 STATS: [
@@ -35,6 +35,10 @@ ITEMS: [
     {
         NAME: "Octagons",
         DESC: "A house for those that just want to stop.",
+    },
+    {
+        NAME: "Triangle",
+        DESC: "A house in the shape of a triangle for eccentrics.",
     },
 
 ],

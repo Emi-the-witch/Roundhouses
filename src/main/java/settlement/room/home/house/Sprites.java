@@ -12,6 +12,7 @@ import settlement.main.SETT;
 import settlement.room.home.house.Sprite.Rot;
 import settlement.room.main.Room;
 import settlement.room.main.furnisher.FurnisherItem;
+import settlement.room.main.furnisher.FurnisherItemTile;
 import settlement.room.sprite.RoomSprite;
 import settlement.tilemap.floor.Floors.Floor;
 import snake2d.SPRITE_RENDERER;
@@ -494,7 +495,7 @@ class Sprites {
 
     final class SpriteConfigs {
                                         //#!# Update this with each
-        final SpriteConfig[][] sprites = new SpriteConfig[8][];
+        final SpriteConfig[][] sprites = new SpriteConfig[9][]; // number of house types total #!#
 
         public SpriteConfigs() {
             sprites[0] = mirror(new SpriteConfig[] {
@@ -817,7 +818,23 @@ class Sprites {
                             {nic1,staD,_mat,staU,bedN},
                     }),
             });
+            // Star
+            sprites[8] = mirror(new SpriteConfig[] {
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,null,stor,null,null,null,null,null},
+                            {null,null,null,null,nic1,null,nic2,null,null,null,null},
+                            {null,null,null,bedN,bedS,null,bedS,bedN,null,null,null},
+                            {bedN,bedS,null,null,null,null,null,null,null,bedS,bedN},
+                            {null,nSta,null,null,null,bedN,null,null,null,nSta,null},
+                            {null,null,bedN,tabl,null,bedS,null,tabl,bedN,null,null},
+                            {null,null,bedS,null,null,null,null,null,bedS,null,null},
+                            {null,null,null,null,staU,_mat,staD,null,null,null,null},
+                            {null,null,bedN,bedS,null,null,null,bedS,bedN,null,null},
+                            {bedN,bedS,null,null,null,null,null,null,null,bedS,bedN},
+                    }),
+            });
 
+            //#!#
         }
 
         private SpriteConfig[] mirror(SpriteConfig[] o) {

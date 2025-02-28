@@ -44,5 +44,9 @@ ITEMS: [
         NAME: "Triangle 2",
         DESC: "A house in the shape of a triangle for eccentrics.",
     },
+    {
+        NAME: "Star",
+        DESC: "NOTE: Build without walls first to ensure completion!!! A house for those with unrealistic dreams.",
+    },
 
 ],

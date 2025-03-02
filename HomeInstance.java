@@ -1,6 +1,7 @@
 package settlement.room.home.house;
 
 import game.GAME;
+import init.RES;
 import init.race.Race;
 import init.resources.RES_AMOUNT;
 import init.type.HGROUP;
@@ -430,8 +431,10 @@ public final class HomeInstance extends RoomInstanceImp implements HOME {
 		SETT.ROOMS().HOME.report(am, occupantsMax(), psetting());
 		if (availability() != null) {
 			SETT.PATH().comps.data.home.reportPresence(serviceX(), serviceY(), availability());
-			// update isolation
-			isolationSet(SETT.ROOMS().isolation.getProspect(blueprint(), this, null));
+			// update isolation #!#
+//			if (!RES.pathTools().isLocked()) {
+//				isolationSet(SETT.ROOMS().isolation.getProspect(blueprint(), this, null));
+//			}
 		}
 	}
 	

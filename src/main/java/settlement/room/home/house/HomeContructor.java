@@ -33,7 +33,8 @@ final class HomeContructor extends Furnisher{
             {12,17,22}, // octagon
             {5,7,9},    // Triangle
             {5,7,9},    // Triangle mirrored
-            {20,28,36}, // Star
+            {16,22,29}, // Star
+            {22,30,39}, // Heart
     };
 
     static final int entrance = 2;
@@ -43,7 +44,7 @@ final class HomeContructor extends Furnisher{
     public final Floor flooring;
     protected HomeContructor(RoomInitData init, ROOM_HOME blue)
             throws IOException {
-        super(init, 9  , 1); // items = Number of houses above #!#
+        super(init, 10  , 1); // items = Number of houses above #!#
 
         flooring = floors.get(0);
         sp = new Sprites(init.data());
@@ -133,16 +134,29 @@ final class HomeContructor extends Furnisher{
         }, 1);
         // Add star
         create(new FurnisherItemTile[][] {
-                {ss,ss,ss,ss,ss,xx,ss,ss,ss,ss,ss},
-                {ss,ss,ss,ss,xx,xx,xx,ss,ss,ss,ss},
-                {ss,ss,ss,xx,xx,xx,xx,xx,ss,ss,ss},
-                {xx,xx,xx,xx,xx,xx,xx,xx,xx,xx,xx},
-                {ss,xx,xx,xx,xx,xx,xx,xx,xx,xx,ss},
-                {ss,ss,xx,xx,xx,xx,xx,xx,xx,ss,ss},
-                {ss,ss,xx,xx,xx,xx,xx,xx,xx,ss,ss},
-                {ss,ss,xx,xx,xx,ee,xx,xx,xx,ss,ss},
-                {ss,xx,xx,xx,ss,ss,ss,xx,xx,xx,ss},
-                {xx,xx,ss,ss,ss,ss,ss,ss,ss,xx,xx},
+                {ss,ss,ss,ss,ss,__,ss,ss,ss,ss,ss},
+                {ss,ss,ss,ss,__,__,__,ss,ss,ss,ss},
+                {ss,ss,ss,__,__,__,__,__,ss,ss,ss},
+                {__,__,__,__,__,__,__,__,__,__,__},
+                {ss,__,__,__,__,__,__,__,__,__,ss},
+                {ss,ss,__,__,__,__,__,__,__,ss,ss},
+                {ss,ss,__,__,__,ee,__,__,__,ss,ss},
+                {ss,ss,__,__,ss,ss,ss,__,__,ss,ss},
+                {ss,ss,__,ss,ss,ss,ss,ss,__,ss,ss},
+        }, 1);
+
+        // Add Heart
+        create(new FurnisherItemTile[][] {
+                {ss,ss,__,ss,ss,ss,ss,ss,__,ss,ss},
+                {ss,__,__,__,ss,ss,ss,__,__,__,ss},
+                {__,__,__,__,__,ee,__,__,__,__,__},
+                {__,__,__,__,__,__,__,__,__,__,__},
+                {__,__,__,__,__,__,__,__,__,__,__},
+                {ss,__,__,__,__,__,__,__,__,__,ss},
+                {ss,ss,__,__,__,__,__,__,__,ss,ss},
+                {ss,ss,ss,__,__,__,__,__,ss,ss,ss},
+                {ss,ss,ss,ss,__,__,__,ss,ss,ss,ss},
+                {ss,ss,ss,ss,ss,__,ss,ss,ss,ss,ss},
         }, 1);
 
         //#!#

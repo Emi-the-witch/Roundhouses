@@ -495,7 +495,7 @@ class Sprites {
 
     final class SpriteConfigs {
                                         //#!# Update this with each
-        final SpriteConfig[][] sprites = new SpriteConfig[9][]; // number of house types total #!#
+        final SpriteConfig[][] sprites = new SpriteConfig[10][]; // number of house types total #!#
 
         public SpriteConfigs() {
             sprites[0] = mirror(new SpriteConfig[] {
@@ -784,6 +784,19 @@ class Sprites {
                             { bedS, null, bedS },
                             { staU, _mat, staD },
                     }),
+                    new SpriteConfig(new Sprite[][] {
+                            { bedN, nSta, bedS },
+                            { bedS, null, bedN },
+                            { chai, null, nic1 },
+                            { bedS, null, nic2 },
+                            { bedN, null, stor },
+                            { nic1, null, bedN },
+                            { bedN, null, bedS },
+                            { bedS, null, nSta },
+                            { tabl, null, bedN },
+                            { chai, null, bedS },
+                            { staU, _mat, staD },
+                    }),
             });
             // octagon, only one furniture style
             sprites[5] = mirror(new SpriteConfig[] {
@@ -821,17 +834,67 @@ class Sprites {
             // Star
             sprites[8] = mirror(new SpriteConfig[] {
                     new SpriteConfig(new Sprite[][] {
-                            {null,null,null,null,null,stor,null,null,null,null,null},
-                            {null,null,null,null,nic1,null,nic2,null,null,null,null},
-                            {null,null,null,bedN,bedS,null,bedS,bedN,null,null,null},
-                            {bedN,bedS,null,null,null,null,null,null,null,bedS,bedN},
-                            {null,nSta,null,null,null,bedN,null,null,null,nSta,null},
-                            {null,null,bedN,tabl,null,bedS,null,tabl,bedN,null,null},
-                            {null,null,bedS,null,null,null,null,null,bedS,null,null},
+                            {null,null,null,null,null,nSta,null,null,null,null,null},
+                            {null,null,null,null,bedN,null,bedN,null,null,null,null},
+                            {null,null,null,stor,bedS,null,bedS,stor,null,null,null},
+                            {nSta,bedN,null,null,null,null,null,null,null,bedN,nSta},
+                            {null,bedS,null,nic1,chai,tabl,chai,nic2,null,bedS,null},
+                            {null,null,null,null,null,null,null,null,null,null,null},
                             {null,null,null,null,staU,_mat,staD,null,null,null,null},
-                            {null,null,bedN,bedS,null,null,null,bedS,bedN,null,null},
-                            {bedN,bedS,null,null,null,null,null,null,null,bedS,bedN},
+                            {null,null,bedS,bedN,null,null,null,bedN,bedS,null,null},
+                            {null,null,nSta,null,null,null,null,null,nSta,null,null},
                     }),
+
+//                            {null,null,null,null,null,XXXX,null,null,null,null,null},
+//                            {null,null,null,null,XXXX,XXXX,XXXX,null,null,null,null},
+//                            {null,null,null,XXXX,XXXX,XXXX,XXXX,XXXX,null,null,null},
+//                            {XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX},
+//                            {null,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,null},
+//                            {null,null,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,null,null},
+//                            {null,null,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,XXXX,null,null},
+//                            {null,null,XXXX,XXXX,null,null,null,XXXX,XXXX,null,null},
+//                            {null,null,XXXX,null,null,null,null,null,XXXX,null,null},
+
+            });
+            // Heart
+            sprites[9] = mirror(new SpriteConfig[] {
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,null,null,null,null,null,null,null},
+                            {null,nSta,null,bedN,null,null,null,bedN,null,nSta,null},
+                            {bedN,null,null,bedS,staU,_mat,staD,bedS,null,null,bedN},
+                            {bedS,null,null,null,null,null,null,null,null,null,bedS},
+                            {null,null,null,null,chai,tabl,chai,null,null,null,null},
+                            {null,stor,bedN,null,nic1,nic2,stor,null,bedN,stor,null},
+                            {null,null,bedS,null,null,null,null,null,bedS,null,null},
+                            {null,null,null,null,bedN,null,bedN,null,null,null,null},
+                            {null,null,null,null,bedS,null,bedS,null,null,null,null},
+                            {null,null,null,null,null,null,null,null,null,null,null},
+                    }),
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,null,null,null,null,null,null,null},
+                            {null,nSta,null,bedN,null,null,null,bedN,null,nSta,null},
+                            {bedN,null,null,bedS,staU,_mat,staD,bedS,null,null,bedN},
+                            {bedS,null,null,null,null,null,null,null,null,null,bedS},
+                            {null,null,null,null,stor,nic1,stor,null,null,null,null},
+                            {null,tabl,bedN,null,tabl,nic2,stor,null,bedN,tabl,null},
+                            {null,null,bedS,null,null,null,null,null,bedS,null,null},
+                            {null,null,null,null,bedN,null,bedN,null,null,null,null},
+                            {null,null,null,null,bedS,null,bedS,null,null,null,null},
+                            {null,null,null,null,null,nic2,null,null,null,null,null},
+                    }),
+
+//                    new SpriteConfig(new Sprite[][] {
+//                            {null,null,xxxx,null,null,null,null,null,xxxx,null,null},
+//                            {null,nSta,xxxx,bedN,null,null,null,bedN,xxxx,nSta,null},
+//                            {bedN,xxxx,xxxx,bedS,staU,_mat,staD,bedS,xxxx,xxxx,bedN},
+//                            {bedS,xxxx,xxxx,xxxx,xxxx,xxxx,xxxx,xxxx,xxxx,xxxx,bedS},
+//                            {xxxx,xxxx,xxxx,xxxx,tabl,tabl,tabl,xxxx,xxxx,xxxx,xxxx},
+//                            {null,stor,bedN,xxxx,nic1,nic2,stor,xxxx,bedN,stor,null},
+//                            {null,null,bedS,xxxx,xxxx,xxxx,xxxx,xxxx,bedS,null,null},
+//                            {null,null,null,xxxx,bedN,xxxx,bedN,xxxx,null,null,null},
+//                            {null,null,null,null,bedS,xxxx,bedS,null,null,null,null},
+//                            {null,null,null,null,null,xxxx,null,null,null,null,null},
+//                    }),
             });
 
             //#!#

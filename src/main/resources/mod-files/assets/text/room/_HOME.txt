@@ -48,5 +48,10 @@ ITEMS: [
         NAME: "Star",
         DESC: "NOTE: Build without walls first to ensure completion!!! A house for those with unrealistic dreams.",
     },
+    {
+        NAME: "Heart",
+        DESC: "A house for those with a lot of love...for roundness",
+    },
+
 
 ],

@@ -35,6 +35,9 @@ final class HomeContructor extends Furnisher{
             {5,7,9},    // Triangle mirrored
             {16,22,29}, // Star
             {22,30,39}, // Heart
+            {10,14,18},// Equilateral Triangle
+            {10,14,18},// Diagonal
+
     };
 
     static final int entrance = 2;
@@ -44,7 +47,7 @@ final class HomeContructor extends Furnisher{
     public final Floor flooring;
     protected HomeContructor(RoomInitData init, ROOM_HOME blue)
             throws IOException {
-        super(init, 10  , 1); // items = Number of houses above #!#
+        super(init, 12  , 1); // items = Number of houses above #!#
 
         flooring = floors.get(0);
         sp = new Sprites(init.data());
@@ -158,7 +161,24 @@ final class HomeContructor extends Furnisher{
                 {ss,ss,ss,ss,__,__,__,ss,ss,ss,ss},
                 {ss,ss,ss,ss,ss,__,ss,ss,ss,ss,ss},
         }, 1);
-
+        // Add EquilatTriangle
+        create(new FurnisherItemTile[][] {
+                {ss,ss,ss,ss,__,ss,ss,ss,ss},
+                {ss,ss,ss,__,__,__,ss,ss,ss},
+                {ss,ss,__,__,__,__,__,ss,ss},
+                {ss,ss,__,__,__,__,__,ss,ss},
+                {ss,__,__,__,__,__,__,__,ss},
+                {__,__,__,__,ee,__,__,__,__},
+        }, 1);
+        // Add The Diagonal
+        create(new FurnisherItemTile[][] {
+                {ss,ss,ss,ss,ss,__,__,__,__,__,ss},
+                {ss,ss,ss,ss,__,__,__,__,__,ss,ss},
+                {ss,ss,ss,__,__,__,__,__,ss,ss,ss},
+                {ss,ss,__,__,__,__,__,ss,ss,ss,ss},
+                {ss,__,__,__,__,__,ss,ss,ss,ss,ss},
+                {__,__,ee,__,__,ss,ss,ss,ss,ss,ss},
+        }, 1);
         //#!#
     }
 

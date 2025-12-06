@@ -1,7 +1,7 @@
 package view.sett.ui.room.construction;
 
 import init.sprite.SPRITES;
-import init.text.D;
+import util.text.D;
 import settlement.room.main.furnisher.FurnisherStat;
 import snake2d.SPRITE_RENDERER;
 import snake2d.util.color.COLOR;
@@ -24,7 +24,7 @@ final class SItems {
 	private final RENDEROBJ table;
 	private final GuiSection stolen = new GuiSection();
 	private final State state;
-	private final IButt[] butts = new IButt[10]; // rows 5,  10 limit #!#
+	private final IButt[] butts = new IButt[12]; // rows 5,  10 limit #!#
 	
 	
 	static {
@@ -50,7 +50,7 @@ final class SItems {
 			}
 		});
 		
-		table = b.create(5, false); // rows 5  #!#
+		table = b.create(6, false); // rows 5  #!#
 		
 		for (int i = 0; i < butts.length; i++) {
 			final int k = i;

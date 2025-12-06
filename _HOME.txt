@@ -45,26 +45,18 @@ ITEMS: [
         COSTS: [22,22,],
         STATS: [22,],
     },
-    {
-        COSTS: [10,10,],
-        STATS: [10,],
-    },
-    {
-        COSTS: [10,10,],
-        STATS: [10,],
-    },
 ],
 UPGRADES: [
 	{
-        RESOURCE_MASK: [0,0,],
+		RESOURCE_MASK: [0,0,],
 		BOOST: 0,
 	},
 	{
-        RESOURCE_MASK: [1,1,],
+		RESOURCE_MASK: [1,1,],
 		BOOST: 0,
 	},
 	{
-        RESOURCE_MASK: [2,2,],
+		RESOURCE_MASK: [2,2,],
 		BOOST: 0,
 	},
 ],

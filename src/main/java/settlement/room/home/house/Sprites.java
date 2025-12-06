@@ -2,7 +2,7 @@ package settlement.room.home.house;
 
 import java.io.IOException;
 
-import init.C;
+import init.constant.C;
 import init.race.home.RaceHomeClass;
 import init.sprite.SPRITES;
 import init.sprite.game.SheetPair;
@@ -495,7 +495,7 @@ class Sprites {
 
     final class SpriteConfigs {
                                         //#!# Update this with each
-        final SpriteConfig[][] sprites = new SpriteConfig[10][]; // number of house types total #!#
+        final SpriteConfig[][] sprites = new SpriteConfig[12][]; // number of house types total #!#
 
         public SpriteConfigs() {
             sprites[0] = mirror(new SpriteConfig[] {
@@ -907,7 +907,93 @@ class Sprites {
 //                            {null,null,null,null,bedS,xxxx,bedS,null,null,null,null},
 //                            {null,null,null,null,null,xxxx,null,null,null,null,null},
 //                    }),
+
             });
+
+// EquilatTriangle
+            sprites[10] = mirror(new SpriteConfig[] {
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,stor,null,null,null,null},
+                            {null,null,null,staD,null,staU,null,null,null},
+                            {null,null,bedN,null,null,null,bedN,null,null},
+                            {null,null,bedS,null,tabl,chai,bedS,null,null},
+                            {null,null,null,null,null,null,null,nic1,null},
+                            {bedN,bedS,nSta,nic2,_mat,stor,null,null,stor},
+                    }),
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,bedN,null,null,null,null},
+                            {null,null,null,null,bedS,nSta,null,null,null},
+                            {null,null,nic1,null,chai,null,chai,null,null},
+                            {null,null,stor,null,tabl,null,tabl,null,null},
+                            {null,staU,null,null,null,null,null,staD,null},
+                            {stor,bedN,bedS,stor,_mat,nic2,bedS,bedN,nSta},
+                    }),
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,stor,null,null,null,null},
+                            {null,null,null,staU,null,staD,null,null,null},
+                            {null,null,tabl,null,null,null,tabl,null,null},
+                            {null,null,chai,nSta,null,stor,chai,null,null},
+                            {null,null,null,null,null,null,null,null,null},
+                            {bedN,bedS,bedN,bedS,_mat,bedS,bedN,bedS,bedN},
+                    }),
+
+            });
+            // Diagonal
+            sprites[11] = mirror(new SpriteConfig[] {
+//                    new SpriteConfig(new Sprite[][] {
+//                            {null,null,null,null,null,xxxx,xxxx,xxxx,xxxx,xxxx,null},
+//                            {null,null,null,null,xxxx,xxxx,xxxx,xxxx,xxxx,null,null},
+//                            {null,null,null,xxxx,xxxx,xxxx,xxxx,xxxx,null,null,null},
+//                            {null,null,xxxx,xxxx,xxxx,xxxx,xxxx,null,null,null,null},
+//                            {null,xxxx,xxxx,xxxx,xxxx,xxxx,null,null,null,null,null},
+//                            {staU,xxxx,null,xxxx,staD,null,null,null,null,null,null},
+//                    }),
+//                    new SpriteConfig(new Sprite[][] {
+//                            {null,null,null,null,null,bedN,xxxx,xxxx,xxxx,nic1,null},
+//                            {null,null,null,null,stor,bedS,xxxx,bedN,nSta,null,null},
+//                            {null,null,null,bedN,nSta,xxxx,xxxx,bedS,null,null,null},
+//                            {null,null,xxxx,bedS,xxxx,chai,nic2,null,null,null,null},
+//                            {null,xxxx,xxxx,xxxx,xxxx,tabl,null,null,null,null,null},
+//                            {staU,xxxx,null,xxxx,staD,null,null,null,null,null,null},
+//                    }),
+//                    new SpriteConfig(new Sprite[][] {
+//                            {null,null,null,null,null,tabl,chai,xxxx,xxxx,xxxx,null},
+//                            {null,null,null,null,nic1,xxxx,xxxx,xxxx,nic2,null,null},
+//                            {null,null,null,xxxx,xxxx,xxxx,bedN,nSta,null,null,null},
+//                            {null,null,bedN,bedS,xxxx,bedN,bedS,null,null,null,null},
+//                            {null,stor,nSta,xxxx,xxxx,bedS,null,null,null,null,null},
+//                            {staU,xxxx,null,xxxx,staD,null,null,null,null,null,null},
+//                    }),
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,null,bedN,null,null,null,nic1},
+                            {null,null,null,null,stor,bedS,null,bedN,nSta,null},
+                            {null,null,null,bedN,nSta,null,null,bedS,null,null},
+                            {null,null,null,bedS,null,chai,nic2,null,null,null},
+                            {null,null,null,null,null,tabl,null,null,null,null},
+                            {staU,null,null,null,staD,null,null,null,null,null},
+                    }),
+                    new SpriteConfig(new Sprite[][] {
+                            {null,null,null,null,null,tabl,chai,null,null,null},
+                            {null,null,null,null,nic1,null,null,null,nic2,null},
+                            {null,null,null,null,null,null,bedN,nSta,null,null},
+                            {null,null,bedN,bedS,null,bedN,bedS,null,null,null},
+                            {null,stor,nSta,null,null,bedS,null,null,null,null},
+                            {staU,null,null,null,staD,null,null,null,null,null},
+                    }),
+//                    null = tile without furniture
+//                    bedN top half of bed
+//                    bedS bottom half of bed
+//                    staU stairs up - only one
+//                    staD stairs down - only one
+//                    nSta - night stand
+//                    stor - storage
+//                    chai - chair
+//                    tabl - table
+//                    nic1 - nicknacks 1
+//                    nic2 - nicknacks 1
+//                    _mat - for the doorway (make it match ee)
+            });
+
 
             //#!#
         }

@@ -52,6 +52,13 @@ ITEMS: [
         NAME: "Heart",
         DESC: "A house for those with a lot of love...for roundness",
     },
-
+    {
+        NAME: "Triangle 3",
+        DESC: "A house in the shape of an equilateral triangle for eccentrics.",
+    },
+    {
+        NAME: "Diagonal",
+        DESC: "A house that is supposedly 'very round'.",
+    },
 
 ],
